@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>You've been hacked</title>
+    <link rel="stylesheet" href="kunstexplosie.css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script class="errorsign">
+        $(document).ready(function() {
+
+            $("html").one( "click",function() {
+                //$("html").append("<img src='errorklein.png' alt='error' class='errorwpopup'>");
+
+
+
+                var a = 1;
+                var n = 31;
+
+                //elke seconde komt er ne nieuwe foto te voorschijn op nummer 
+                for (var i = 0; i < 30; i++) {
+                    setTimeout(function() {
+                        n--;
+                        a++;
+                        var b = a - 1;
+                        var nummer = n - 1;
+                        $(".kunstexplosie").append("<div class='eric'><div class='nummer'>" + nummer + "</div><img src='kunst/kunst_explosie" + (a - 1) + ".jpg' alt=' een ontploft kunstwerk'  width='287' height='383'></div>")
+                    }, 1000 * i);
+                    
+                   $("html").animate({scrollTop:$(document).height()}, 'slow');
+                    
+      
+                    
+                    
+                }
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="kunstexplosie">
+
+    </div>
+
+
+</body></html>
